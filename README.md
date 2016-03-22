@@ -11,3 +11,8 @@
 - Kanbanflow for task tracking and timer (https://kanbanflow.com/board/8c4cc9676829bbd9ad42e7542259ed77)
 - GitHub for version control (https://github.com/Waynert86/AdventureFinder)
 - wakatime to log actual program time (https://wakatime.com/dashboard)
+
+
+##### __Resources__
+
+-rwFirebase Tutorial (https://www.raywenderlich.com/109706/firebase-tutorial-getting-started)
