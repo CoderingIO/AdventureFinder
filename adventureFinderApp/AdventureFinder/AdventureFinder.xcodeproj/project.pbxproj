@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		490967A89EBA12C3DCB8AA84 /* Pods_AdventureFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B044066779D4F8BECDE75412 /* Pods_AdventureFinder.framework */; };
+		9E30FE3E1CA31BFD000F869D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE3D1CA31BFD000F869D /* LoginViewController.swift */; };
+		9E30FE401CA33325000F869D /* AdvetureFinderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE3F1CA33325000F869D /* AdvetureFinderItem.swift */; };
+		9E30FE421CA36027000F869D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE411CA36027000F869D /* Users.swift */; };
 		9ED31E781CA0C1E60072B5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED31E771CA0C1E60072B5A0 /* AppDelegate.swift */; };
 		9ED31E7A1CA0C1E60072B5A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED31E791CA0C1E60072B5A0 /* ViewController.swift */; };
 		9ED31E7D1CA0C1E60072B5A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ED31E7B1CA0C1E60072B5A0 /* Main.storyboard */; };
@@ -22,6 +25,7 @@
 		9ED31EAE1CA0C3BA0072B5A0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED31EAD1CA0C3BA0072B5A0 /* Security.framework */; };
 		9ED31EB01CA0C3CA0072B5A0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED31EAF1CA0C3CA0072B5A0 /* SystemConfiguration.framework */; };
 		9ED31EB21CA0C41E0072B5A0 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED31EB11CA0C41E0072B5A0 /* Firebase.framework */; };
+		9ED31EB71CA0DFE50072B5A0 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED31EB61CA0DFE50072B5A0 /* MapTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 /* Begin PBXFileReference section */
 		8BB8280C40E989620A7F8DE3 /* Pods-AdventureFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdventureFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdventureFinder/Pods-AdventureFinder.release.xcconfig"; sourceTree = "<group>"; };
 		9CE11B76086EE753AA12CE10 /* Pods-AdventureFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdventureFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdventureFinder/Pods-AdventureFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		9E30FE3D1CA31BFD000F869D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9E30FE3F1CA33325000F869D /* AdvetureFinderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvetureFinderItem.swift; sourceTree = "<group>"; };
+		9E30FE411CA36027000F869D /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		9ED31E741CA0C1E60072B5A0 /* AdventureFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventureFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED31E771CA0C1E60072B5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ED31E791CA0C1E60072B5A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +71,7 @@
 		9ED31EAD1CA0C3BA0072B5A0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9ED31EAF1CA0C3CA0072B5A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9ED31EB11CA0C41E0072B5A0 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		9ED31EB61CA0DFE50072B5A0 /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		B044066779D4F8BECDE75412 /* Pods_AdventureFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdventureFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +148,9 @@
 		9ED31E761CA0C1E60072B5A0 /* AdventureFinder */ = {
 			isa = PBXGroup;
 			children = (
+				9ED31EB51CA0DF890072B5A0 /* Contollers */,
+				9ED31EB41CA0DF7E0072B5A0 /* View */,
+				9ED31EB31CA0DF760072B5A0 /* Models */,
 				9ED31E771CA0C1E60072B5A0 /* AppDelegate.swift */,
 				9ED31E791CA0C1E60072B5A0 /* ViewController.swift */,
 				9ED31E7B1CA0C1E60072B5A0 /* Main.storyboard */,
@@ -166,6 +177,31 @@
 				9ED31E991CA0C1E60072B5A0 /* Info.plist */,
 			);
 			path = AdventureFinderUITests;
+			sourceTree = "<group>";
+		};
+		9ED31EB31CA0DF760072B5A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E30FE3F1CA33325000F869D /* AdvetureFinderItem.swift */,
+				9E30FE411CA36027000F869D /* Users.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9ED31EB41CA0DF7E0072B5A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9ED31EB61CA0DFE50072B5A0 /* MapTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9ED31EB51CA0DF890072B5A0 /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				9E30FE3D1CA31BFD000F869D /* LoginViewController.swift */,
+			);
+			name = Contollers;
 			sourceTree = "<group>";
 		};
 		BC8CF60345A352414D6E86F6 /* Pods */ = {
@@ -362,8 +398,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E30FE3E1CA31BFD000F869D /* LoginViewController.swift in Sources */,
+				9E30FE401CA33325000F869D /* AdvetureFinderItem.swift in Sources */,
 				9ED31E7A1CA0C1E60072B5A0 /* ViewController.swift in Sources */,
 				9ED31E781CA0C1E60072B5A0 /* AppDelegate.swift in Sources */,
+				9E30FE421CA36027000F869D /* Users.swift in Sources */,
+				9ED31EB71CA0DFE50072B5A0 /* MapTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
