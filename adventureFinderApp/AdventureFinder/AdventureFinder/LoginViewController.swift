@@ -38,8 +38,13 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func loginTouched (sender:AnyObject) {
+        self.ref.authUser(textFieldLoginEmail.text, password: textFieldLoginPassword.text, withCompletionBlock: { (error, auth) -> Void in
+        })
+    }
 
-    @IBAction func loginTouched(sender: AnyObject) {
+    @IBAction func signUpTouched(sender: AnyObject) {
         let alert = UIAlertController(title: appName, message: "Register", preferredStyle: .Alert)
         
         let saveAction = UIAlertAction(title: "Save", style: .Default) { (action: UIAlertAction!) -> Void in

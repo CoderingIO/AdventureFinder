@@ -11,6 +11,7 @@
 		9E30FE3E1CA31BFD000F869D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE3D1CA31BFD000F869D /* LoginViewController.swift */; };
 		9E30FE401CA33325000F869D /* AdvetureFinderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE3F1CA33325000F869D /* AdvetureFinderItem.swift */; };
 		9E30FE421CA36027000F869D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE411CA36027000F869D /* Users.swift */; };
+		9E30FE441CA370CB000F869D /* AdventureListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE431CA370CB000F869D /* AdventureListTableViewController.swift */; };
 		9ED31E781CA0C1E60072B5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED31E771CA0C1E60072B5A0 /* AppDelegate.swift */; };
 		9ED31E7A1CA0C1E60072B5A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED31E791CA0C1E60072B5A0 /* ViewController.swift */; };
 		9ED31E7D1CA0C1E60072B5A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ED31E7B1CA0C1E60072B5A0 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		9E30FE3D1CA31BFD000F869D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9E30FE3F1CA33325000F869D /* AdvetureFinderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvetureFinderItem.swift; sourceTree = "<group>"; };
 		9E30FE411CA36027000F869D /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		9E30FE431CA370CB000F869D /* AdventureListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureListTableViewController.swift; sourceTree = "<group>"; };
 		9ED31E741CA0C1E60072B5A0 /* AdventureFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventureFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED31E771CA0C1E60072B5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ED31E791CA0C1E60072B5A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				9E30FE3D1CA31BFD000F869D /* LoginViewController.swift */,
+				9E30FE431CA370CB000F869D /* AdventureListTableViewController.swift */,
 			);
 			name = Contollers;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				9E30FE401CA33325000F869D /* AdvetureFinderItem.swift in Sources */,
 				9ED31E7A1CA0C1E60072B5A0 /* ViewController.swift in Sources */,
 				9ED31E781CA0C1E60072B5A0 /* AppDelegate.swift in Sources */,
+				9E30FE441CA370CB000F869D /* AdventureListTableViewController.swift in Sources */,
 				9E30FE421CA36027000F869D /* Users.swift in Sources */,
 				9ED31EB71CA0DFE50072B5A0 /* MapTableViewCell.swift in Sources */,
 			);

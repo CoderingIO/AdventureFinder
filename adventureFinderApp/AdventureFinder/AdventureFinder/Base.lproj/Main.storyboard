@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -43,6 +44,7 @@
                                 </constraints>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="loginTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mit-MB-RGO"/>
                                     <segue destination="FCB-FO-eRI" kind="showDetail" id="KMm-AH-hdf"/>
                                 </connections>
                             </button>
@@ -53,7 +55,7 @@
                                 </constraints>
                                 <state key="normal" title="Sign-Up"/>
                                 <connections>
-                                    <action selector="loginTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZB8-1v-1V4"/>
+                                    <action selector="signUpTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2iy-Bt-Ahr"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eO4-PM-BiR">
@@ -216,7 +218,7 @@
         <!--Main Screen-->
         <scene sceneID="hRW-DP-Ebc">
             <objects>
-                <tableViewController id="tlH-LJ-xAy" userLabel="Main Screen" customClass="MainViewController" sceneMemberID="viewController">
+                <tableViewController id="tlH-LJ-xAy" userLabel="Main Screen" customClass="AdventureListTableViewController" customModule="AdventureFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="oe2-sE-nMU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,16 +233,23 @@
                                             <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginToList" id="vne-rq-3cm"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem key="rightBarButtonItem" title="Map" id="X14-f0-vML">
-                                        <connections>
-                                            <segue destination="5rW-gL-4je" kind="show" action="showDetailViewController:sender:" id="bmJ-1g-vNI"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <rightBarButtonItems>
+                                        <barButtonItem title="Map" id="X14-f0-vML">
+                                            <connections>
+                                                <segue destination="5rW-gL-4je" kind="show" action="showDetailViewController:sender:" id="bmJ-1g-vNI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem title="Add" id="KFD-Pi-4wX">
+                                            <connections>
+                                                <action selector="addButtonTouched:" destination="tlH-LJ-xAy" id="yby-gc-HrB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </rightBarButtonItems>
                                 </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="rKa-2d-zd9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdventureCell" rowHeight="88" id="rKa-2d-zd9">
                                 <rect key="frame" x="0.0" y="136" width="600" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rKa-2d-zd9" id="3rZ-Ay-hFn">
@@ -377,6 +386,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pdK-UD-vvI"/>
+        <segue reference="lsG-Ku-cyA"/>
     </inferredMetricsTieBreakers>
 </document>
