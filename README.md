@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Adventure Finder
 
 ## Purpose
@@ -16,3 +17,6 @@
 ##### __Resources__
 
 -rwFirebase Tutorial (https://www.raywenderlich.com/109706/firebase-tutorial-getting-started)
+=======
+# AdventureFinder
+>>>>>>> c797184ae021f4f490d33eea7a273f89cfd66b23

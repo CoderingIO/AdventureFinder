@@ -140,9 +140,7 @@ extension SearchTableViewController {
         cell.detailTextLabel?.text = parseAddress(selectedItem)
         return cell
     }
-}
 
-extension SearchTableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedItem = matchingItems[indexPath.row].placemark
         handleMapSearchDelegate?.dropPinZoom(selectedItem)

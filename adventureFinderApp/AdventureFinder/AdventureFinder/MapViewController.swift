@@ -8,13 +8,19 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 protocol HandleMapSearch {
     func dropPinZoom(placemark:MKPlacemark)
 }
 
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let ref = Firebase(url: "https://adventurefinder.firebaseio.com/")
+    let usersRef = Firebase(url: "https://adventurefinder.firebaseio.com/")
+
+    var user: User!
     
     var adventures = [AdventureItem]()
     
@@ -25,6 +31,10 @@ class MapViewController: UIViewController {
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    
+    @IBOutlet weak var mapTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +64,42 @@ class MapViewController: UIViewController {
         searchTable.handleMapSearchDelegate = self
         
         
-    
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            }, withCancelBlock: {error in
+                print(error.description)
+        })
         
+        user = User(uid: "FakeID", email: "looking@for.fun")
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        ref.queryOrderedByChild("completed")/*("distance").queryStartingAtValue(0)*/.observeEventType(.Value, withBlock: { snapshot in
+            
+            var newAdventures = [AdventureItem]()
+            
+            for adventure in snapshot.children {
+                
+                let adventureItem = AdventureItem(snapshot: adventure as! FDataSnapshot)
+                newAdventures.append(adventureItem)
+            }
+            self.adventures = newAdventures
+            self.mapTableView.reloadData()
+        })
+        ref.observeAuthEventWithBlock { authData in
+            if authData != nil {
+                self.user = User(authData: authData)
+                
+                let currentUserRef = self.usersRef.childByAppendingPath(self.user.uid)
+                
+                currentUserRef.setValue(self.user.email)
+                
+                currentUserRef.onDisconnectRemoveValue()
+            }
+        }
     }
     
     func getDirections(){
@@ -70,7 +114,24 @@ class MapViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        // #warning Incomplete implementation, return the number of rows
+        return adventures.count
+    }
     
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("AdventureCell") as! AdventureItemTableViewCell
+        
+        let adventureItem = adventures[indexPath.row]
+        
+        cell.adventure = adventureItem
+        cell.configureView()
+        
+        
+        return cell
+    }
     
 
     /*
@@ -131,7 +192,7 @@ extension MapViewController: HandleMapSearch {
 
 }
 
-extension MapViewController : MKMapViewDelegate {
+extension MapViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?{
         if annotation is MKUserLocation {
             return nil
@@ -150,3 +211,4 @@ extension MapViewController : MKMapViewDelegate {
 
     }
 }
+
