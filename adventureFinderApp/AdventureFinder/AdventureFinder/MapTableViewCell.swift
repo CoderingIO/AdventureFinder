@@ -21,5 +21,7 @@ class MapTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

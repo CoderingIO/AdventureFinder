@@ -16,7 +16,6 @@ class AdventureListTableViewController: UITableViewController {
     
     var adventures = [AdventureItem]()
     var user: User!
-    var userCountBarButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,10 +65,12 @@ class AdventureListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AdventureCell")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("AdventureCell") as! AdventureItemTableViewCell
+        
         let adventureItem = adventures[indexPath.row]
         
-        cell.textLabel?.text = adventureItem.name
+        cell.adventure = adventureItem
+        cell.configureView()
         
         return cell
         
@@ -95,8 +96,10 @@ class AdventureListTableViewController: UITableViewController {
         let saveAction = UIAlertAction(title: "Save", style: .Default) { (action: UIAlertAction) -> Void in
             
             let textField = alert.textFields![0]
+            let addressTextField = alert.textFields![1]
             
-            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email)
+            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, key: "", address: addressTextField.text!)
+//            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, addressTextField.text!)
             
             let adventureItemRef = self.ref.childByAppendingPath(textField.text!.lowercaseString)
             
@@ -111,6 +114,11 @@ class AdventureListTableViewController: UITableViewController {
         
         alert.addTextFieldWithConfigurationHandler {
             (textField: UITextField!) -> Void in
+            textField.placeholder = "Enter Place Name"
+        }
+        alert.addTextFieldWithConfigurationHandler {
+            (addressTextField: UITextField!) -> Void in
+            addressTextField.placeholder = "Enter Address"
         }
         
         alert.addAction(saveAction)
@@ -120,5 +128,8 @@ class AdventureListTableViewController: UITableViewController {
         
        
     }
+    
+    
+    
 
 }
