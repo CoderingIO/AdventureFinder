@@ -142,7 +142,6 @@
         <!--Map View Controller-->
         <scene sceneID="goK-LE-yP7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="69z-IF-clX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qse-uo-9WR" customClass="MapViewController" customModule="AdventureFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r2l-7i-SZR"/>
@@ -250,6 +249,7 @@
                         <outlet property="mapView" destination="Af1-hd-r7H" id="vCf-35-wP5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69z-IF-clX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3220" y="-353"/>
         </scene>

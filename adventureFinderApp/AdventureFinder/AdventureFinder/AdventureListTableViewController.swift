@@ -124,19 +124,17 @@ class AdventureListTableViewController: UITableViewController {
     }
     
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        var detailItem:AnyObject?
-//        
-//        let controller = segue.destinationViewController as! AdventureItemViewController
-//        
-//        if let indexPath = self.tableView.indexPathForSelectedRow {
-//            if segue.identifier == "AdventureItemView" {
-//                detailItem = adventures(indexPath.row)
-//            }
-//        }
-//    
-//        print(detailItem)
-//        
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let controller = segue.destinationViewController as! AdventureItemViewController
+        
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            if segue.identifier == "AdventureItemView" {
+                controller.detailItem = adventures[indexPath.row]
+            }
+        }
+    
+        
+    }
 
 }

@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
 
-    var detailItem:AnyObject? {
+    var detailItem:Any? {
         didSet {
             self.configureView()
         }
