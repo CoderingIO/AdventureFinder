@@ -45,7 +45,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mit-MB-RGO"/>
-                                    <segue destination="FCB-FO-eRI" kind="showDetail" id="KMm-AH-hdf"/>
+                                    <segue destination="FCB-FO-eRI" kind="showDetail" identifier="LoginToList" id="KMm-AH-hdf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-aK-cqv">
@@ -340,7 +340,7 @@
                                     <outlet property="PlaceNameLabel" destination="osa-JT-Hol" id="3Jd-Oc-5Fy"/>
                                     <outlet property="addressLabel" destination="Elw-Sb-fPk" id="VEn-bE-wio"/>
                                     <outlet property="ratingLabel" destination="4ys-fo-ZYs" id="5Hd-Ae-Yza"/>
-                                    <segue destination="Kom-kL-3Ns" kind="showDetail" id="LiV-uv-mvE"/>
+                                    <segue destination="Kom-kL-3Ns" kind="show" identifier="AdventureItemView" action="showDetailViewController:sender:" id="LiV-uv-mvE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -396,7 +396,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="6iz-fb-5Qv">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Lyq-Ng-sey"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Lyq-Ng-sey">
+                                            <connections>
+                                                <action selector="goBack" destination="wQC-bb-jnv" id="pK5-g9-kZh"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -447,6 +451,7 @@
                         <outlet property="addressLabel" destination="Jbc-Ck-WAk" id="zuv-Co-Jp5"/>
                         <outlet property="descriptionTextField" destination="0IL-pV-sgW" id="9Zh-zB-di3"/>
                         <outlet property="imageView" destination="ecP-Vv-jN8" id="QRW-f6-AGr"/>
+                        <outlet property="navBar" destination="Ggy-fF-ubr" id="IYi-cA-ucr"/>
                         <outlet property="placeNameLabel" destination="gNQ-rb-4F8" id="h5w-qh-zXC"/>
                         <outlet property="ratingLabel" destination="VeA-Z0-wSI" id="GiG-aa-gNp"/>
                     </connections>

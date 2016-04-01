@@ -11,11 +11,12 @@ import Firebase
 
 class AdventureListTableViewController: UITableViewController {
     
-    let ref = Firebase(url: "https://adventurefinder.firebaseio.com/")
-    let usersRef = Firebase(url: "https://adventurefinder.firebaseio.com/")
+    let ref = Firebase(url: "https://adventurefinder.firebaseio.com/adventures")
+    let usersRef = Firebase(url: "https://adventurefinder.firebaseio.com/activeUsers")
     
     var adventures = [AdventureItem]()
     var user: User!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +27,19 @@ class AdventureListTableViewController: UITableViewController {
                 print(error.description)
         })
         
-       
-        
         user = User(uid: "FakeID", email: "looking@for.fun")
+        
+        tableView.rowHeight = 85.0
+        
     }
+    
+
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         ref.queryOrderedByChild("completed").observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
             
                 var newAdventures = [AdventureItem]()
             
@@ -76,18 +81,7 @@ class AdventureListTableViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let cell = tableView.cellForRowAtIndexPath(indexPath)!
-        
-        let adventureItem = adventures[indexPath.row]
-        
-        // need to go to detail view from here
-        
-        
-        
-        
-    }
+  
     
     
     @IBAction func addButtonTouched(sender:AnyObject) {
@@ -130,6 +124,19 @@ class AdventureListTableViewController: UITableViewController {
     }
     
     
-    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        var detailItem:AnyObject?
+//        
+//        let controller = segue.destinationViewController as! AdventureItemViewController
+//        
+//        if let indexPath = self.tableView.indexPathForSelectedRow {
+//            if segue.identifier == "AdventureItemView" {
+//                detailItem = adventures(indexPath.row)
+//            }
+//        }
+//    
+//        print(detailItem)
+//        
+//    }
 
 }

@@ -17,6 +17,7 @@
 		9E30FE4A1CA88420000F869D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE491CA88420000F869D /* MapViewController.swift */; };
 		9E30FE4C1CA9C108000F869D /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE4B1CA9C108000F869D /* MapTableViewController.swift */; };
 		9E30FE4E1CA9D01E000F869D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE4D1CA9D01E000F869D /* SearchTableViewController.swift */; };
+		9E30FE521CAB3A4B000F869D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30FE511CAB3A4B000F869D /* DetailViewController.swift */; };
 		9ED31E781CA0C1E60072B5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED31E771CA0C1E60072B5A0 /* AppDelegate.swift */; };
 		9ED31E7A1CA0C1E60072B5A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED31E791CA0C1E60072B5A0 /* ViewController.swift */; };
 		9ED31E7D1CA0C1E60072B5A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ED31E7B1CA0C1E60072B5A0 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		9E30FE491CA88420000F869D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9E30FE4B1CA9C108000F869D /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
 		9E30FE4D1CA9D01E000F869D /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		9E30FE511CAB3A4B000F869D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9ED31E741CA0C1E60072B5A0 /* AdventureFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventureFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED31E771CA0C1E60072B5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ED31E791CA0C1E60072B5A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				9E30FE4B1CA9C108000F869D /* MapTableViewController.swift */,
 				9E30FE3D1CA31BFD000F869D /* LoginViewController.swift */,
 				9E30FE431CA370CB000F869D /* AdventureListTableViewController.swift */,
+				9E30FE511CAB3A4B000F869D /* DetailViewController.swift */,
 				9E30FE451CA4BAF8000F869D /* AdventureItemTableViewCell.swift */,
 				9E30FE471CA4D279000F869D /* AdventureItemViewController.swift */,
 				9E30FE491CA88420000F869D /* MapViewController.swift */,
@@ -416,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E30FE521CAB3A4B000F869D /* DetailViewController.swift in Sources */,
 				9E30FE3E1CA31BFD000F869D /* LoginViewController.swift in Sources */,
 				9E30FE401CA33325000F869D /* AdvetureFinderItem.swift in Sources */,
 				9ED31E7A1CA0C1E60072B5A0 /* ViewController.swift in Sources */,

@@ -12,12 +12,15 @@ import Firebase
 
 struct AdventureItem {
     
+    
+    
     let key:String!
     let name:String!
     let addedByUser:String!
     let address: String!
     let ref: Firebase?
     
+    // move key to end. Dont have to include when calling
     init(name:String, addedByUser:String, key:String = "", address:String) {
         self.key = key
         self.name = name
@@ -28,8 +31,8 @@ struct AdventureItem {
     
     init(snapshot:FDataSnapshot) {
         key = snapshot.key
-        name = snapshot.value["name"] as! String!
-        address = snapshot.value["address"] as! String!
+        name = snapshot.value["name"] as! String
+        address = snapshot.value["address"] as! String
         addedByUser = snapshot.value["addedByUser"] as! String
         ref = snapshot.ref
     }
@@ -38,7 +41,7 @@ struct AdventureItem {
         return [
             "name": name,
             "address": address,
-            "addedByUser": addedByUser,
+            "addedByUser": addedByUser
         ]
     }
     
