@@ -23,6 +23,7 @@ class AdventureItemViewController: DetailViewController {
         guard let adventure = self.detailItem as? AdventureItem? where placeNameLabel != nil else {return}
         
         placeNameLabel?.text = adventure!.name
+        navigationItem.title = adventure!.name
         ratingLabel?.text = "Awesome"
         addressLabel?.text = adventure!.address
         descriptionTextField?.text = "Description Here"
@@ -32,13 +33,13 @@ class AdventureItemViewController: DetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backButton = UIButton(type: UIButtonType.RoundedRect)
-        backButton.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
-        backButton.backgroundColor = UIColor.redColor()
-        backButton.setTitle("BacK", forState: UIControlState.Normal)
-        backButton.addTarget(self, action: #selector(backTouched), forControlEvents: UIControlEvents.TouchUpInside)
-        
-        self.navBar!.addSubview(backButton)
+//        let backButton = UIButton(type: UIButtonType.RoundedRect)
+//        backButton.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+//        backButton.backgroundColor = UIColor.redColor()
+//        backButton.setTitle("BacK", forState: UIControlState.Normal)
+//        backButton.addTarget(self, action: #selector(backTouched), forControlEvents: UIControlEvents.TouchUpInside)
+//        
+//        self.navBar!.addSubview(backButton)
         
         
         
@@ -47,7 +48,7 @@ class AdventureItemViewController: DetailViewController {
     }
     
     
-    func backTouched(sender:UIButton!) {
+    @IBAction func backTouched(sender:UIButton!) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     

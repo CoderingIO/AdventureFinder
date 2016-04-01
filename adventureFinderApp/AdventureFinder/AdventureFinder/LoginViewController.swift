@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
 
+    @IBOutlet weak var loginButton: UIButton!
     
     
     
@@ -31,6 +32,8 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        loginButton.enabled = false
+        
         ref.observeAuthEventWithBlock { (authData) -> Void in
             
             if authData != nil {
@@ -40,6 +43,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTouched (sender:AnyObject) {
+        
+        
         self.ref.authUser(textFieldLoginEmail.text, password: textFieldLoginPassword.text, withCompletionBlock: { (error, auth) -> Void in
         })
     }

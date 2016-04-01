@@ -87,6 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="m6a-0r-bR7"/>
                     <connections>
+                        <outlet property="loginButton" destination="UX1-Lx-yXu" id="WqC-j3-Y4B"/>
                         <outlet property="textFieldLoginEmail" destination="eO4-PM-BiR" id="Vn4-FC-9kb"/>
                         <outlet property="textFieldLoginPassword" destination="jbm-fz-3F0" id="x0w-k2-CcE"/>
                     </connections>
@@ -274,7 +275,8 @@
                                     <rightBarButtonItems>
                                         <barButtonItem title="Map" id="X14-f0-vML">
                                             <connections>
-                                                <segue destination="2rr-ce-8m5" kind="show" id="Tb0-9j-2Ch"/>
+                                                <action selector="mapButtonTouched:" destination="tlH-LJ-xAy" id="hSm-G5-Pdt"/>
+                                                <segue destination="2rr-ce-8m5" kind="show" identifier="map" id="PfM-HF-Dnh"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem title="Add" id="KFD-Pi-4wX">
@@ -398,19 +400,19 @@
                                     <navigationItem title="Title" id="6iz-fb-5Qv">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Lyq-Ng-sey">
                                             <connections>
-                                                <action selector="goBack" destination="wQC-bb-jnv" id="pK5-g9-kZh"/>
+                                                <action selector="backTouched:" destination="Kom-kL-3Ns" id="R4C-hc-EUe"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeA-Z0-wSI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeA-Z0-wSI">
                                 <rect key="frame" x="179" y="286" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-Ck-WAk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-Ck-WAk">
                                 <rect key="frame" x="179" y="315" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -422,23 +424,23 @@
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="trailing" secondItem="C1X-cy-v58" secondAttribute="trailingMargin" id="0ze-N0-ZGc"/>
                             <constraint firstItem="0IL-pV-sgW" firstAttribute="top" secondItem="Eaz-MH-uFY" secondAttribute="bottom" constant="8" symbolic="YES" id="9kI-nA-ycN"/>
                             <constraint firstAttribute="bottom" secondItem="0IL-pV-sgW" secondAttribute="bottom" constant="20" symbolic="YES" id="9lu-mh-CGW"/>
-                            <constraint firstItem="VeA-Z0-wSI" firstAttribute="leading" secondItem="Jbc-Ck-WAk" secondAttribute="leading" id="AYt-RO-fdW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0IL-pV-sgW" secondAttribute="trailing" constant="5" id="FLL-5g-FVb"/>
-                            <constraint firstItem="Jbc-Ck-WAk" firstAttribute="top" secondItem="VeA-Z0-wSI" secondAttribute="bottom" constant="8" id="IIC-jB-7PA"/>
+                            <constraint firstItem="Jbc-Ck-WAk" firstAttribute="top" secondItem="Eaz-MH-uFY" secondAttribute="top" id="JCE-V1-Pfn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ggy-fF-ubr" secondAttribute="trailing" constant="-20" id="JFg-8G-3sc"/>
                             <constraint firstItem="Eaz-MH-uFY" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="bottom" constant="8" id="JfM-hk-pht"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="top" secondItem="Ggy-fF-ubr" secondAttribute="bottom" id="Kmj-rt-sSo"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="leading" secondItem="C1X-cy-v58" secondAttribute="leadingMargin" id="KpI-Z0-fmj"/>
+                            <constraint firstItem="VeA-Z0-wSI" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="top" id="Q0D-dC-Zy5"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="top" secondItem="Ggy-fF-ubr" secondAttribute="bottom" id="RZX-3k-AgQ"/>
-                            <constraint firstItem="VeA-Z0-wSI" firstAttribute="leading" secondItem="gNQ-rb-4F8" secondAttribute="trailing" constant="19" id="V6E-AR-LQo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VeA-Z0-wSI" secondAttribute="trailing" constant="8" id="TYf-g1-DkU"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="top" secondItem="Ggy-fF-ubr" secondAttribute="bottom" id="Y2G-kB-1eG"/>
                             <constraint firstItem="0IL-pV-sgW" firstAttribute="leading" secondItem="Eaz-MH-uFY" secondAttribute="leading" id="a38-6c-86i"/>
                             <constraint firstItem="Ggy-fF-ubr" firstAttribute="top" secondItem="C1X-cy-v58" secondAttribute="topMargin" id="bwR-Lg-hcf"/>
                             <constraint firstItem="gNQ-rb-4F8" firstAttribute="top" secondItem="ecP-Vv-jN8" secondAttribute="bottom" constant="3" id="cLR-a4-PGG"/>
                             <constraint firstItem="gNQ-rb-4F8" firstAttribute="leading" secondItem="ecP-Vv-jN8" secondAttribute="leading" id="eZw-rd-Xsq"/>
-                            <constraint firstItem="VeA-Z0-wSI" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="top" id="kTo-7I-deH"/>
                             <constraint firstItem="Eaz-MH-uFY" firstAttribute="leading" secondItem="gNQ-rb-4F8" secondAttribute="leading" id="oK3-bi-Qqh"/>
                             <constraint firstItem="Ggy-fF-ubr" firstAttribute="leading" secondItem="C1X-cy-v58" secondAttribute="leadingMargin" constant="-20" id="xlP-XZ-6Ri"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jbc-Ck-WAk" secondAttribute="trailing" constant="8" id="yYO-Us-ahi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

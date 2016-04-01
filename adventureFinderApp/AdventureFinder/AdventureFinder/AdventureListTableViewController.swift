@@ -27,7 +27,7 @@ class AdventureListTableViewController: UITableViewController {
                 print(error.description)
         })
         
-        user = User(uid: "FakeID", email: "looking@for.fun")
+        //user = User(uid: "FakeID", email: "looking@for.fun")
         
         tableView.rowHeight = 85.0
         
@@ -123,18 +123,21 @@ class AdventureListTableViewController: UITableViewController {
        
     }
     
+    @IBAction func mapButtonTouched(sender:UIButton) {
+        performSegueWithIdentifier("map", sender: UIButton.self)
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let controller = segue.destinationViewController as! AdventureItemViewController
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
             if segue.identifier == "AdventureItemView" {
+                let controller = segue.destinationViewController as! AdventureItemViewController
+
                 controller.detailItem = adventures[indexPath.row]
             }
         }
-    
-        
     }
 
 }

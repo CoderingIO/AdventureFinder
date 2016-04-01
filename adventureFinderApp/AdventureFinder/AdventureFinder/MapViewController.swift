@@ -17,8 +17,7 @@ protocol HandleMapSearch {
 
 class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let ref = Firebase(url: "https://adventurefinder.firebaseio.com/")
-    let usersRef = Firebase(url: "https://adventurefinder.firebaseio.com/")
+    let ref = Firebase(url: "https://adventurefinder.firebaseio.com/adventures")
 
     var user: User!
     
@@ -60,6 +59,8 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
     searchTable.mapView = mapView
         
+        //mapView.showsUserLocation = true
+        
         // pin maker
         searchTable.handleMapSearchDelegate = self
         
@@ -77,7 +78,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        ref.queryOrderedByChild("completed")/*("distance").queryStartingAtValue(0)*/.observeEventType(.Value, withBlock: { snapshot in
+        ref.observeEventType(.Value, withBlock: { snapshot in
             
             var newAdventures = [AdventureItem]()
             
@@ -89,17 +90,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             self.adventures = newAdventures
             self.mapTableView.reloadData()
         })
-        ref.observeAuthEventWithBlock { authData in
-            if authData != nil {
-                self.user = User(authData: authData)
-                
-                let currentUserRef = self.usersRef.childByAppendingPath(self.user.uid)
-                
-                currentUserRef.setValue(self.user.email)
-                
-                currentUserRef.onDisconnectRemoveValue()
-            }
-        }
+        
     }
     
     func getDirections(){
