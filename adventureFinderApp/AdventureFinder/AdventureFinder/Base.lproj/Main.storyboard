@@ -44,8 +44,7 @@
                                 </constraints>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="loginTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mit-MB-RGO"/>
-                                    <segue destination="FCB-FO-eRI" kind="showDetail" identifier="LoginToList" id="KMm-AH-hdf"/>
+                                    <action selector="loginTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1z-gB-C6W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-aK-cqv">
@@ -90,6 +89,7 @@
                         <outlet property="loginButton" destination="UX1-Lx-yXu" id="WqC-j3-Y4B"/>
                         <outlet property="textFieldLoginEmail" destination="eO4-PM-BiR" id="Vn4-FC-9kb"/>
                         <outlet property="textFieldLoginPassword" destination="jbm-fz-3F0" id="x0w-k2-CcE"/>
+                        <segue destination="FCB-FO-eRI" kind="show" identifier="LoginToList" id="gZF-b8-1wr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

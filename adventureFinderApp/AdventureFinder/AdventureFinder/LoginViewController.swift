@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        loginButton.enabled = false
+        //loginButton.enabled = false
         
         ref.observeAuthEventWithBlock { (authData) -> Void in
             
