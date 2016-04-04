@@ -32,8 +32,8 @@ struct AdventureItem {
     init(snapshot:FDataSnapshot) {
         rating = snapshot.value["rating"] as? Int
         name = snapshot.value["name"] as? String
-        address = snapshot.value["address"] as? String
-        addedByUser = snapshot.value["addedByUser"] as? String
+        address = snapshot.value["address"] as! String
+        addedByUser = snapshot.value["addedByUser"] as! String
         ref = snapshot.ref
     }
     

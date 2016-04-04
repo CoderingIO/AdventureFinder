@@ -91,11 +91,9 @@ class AdventureListTableViewController: UITableViewController {
             
             let textField = alert.textFields![0]
             let addressTextField = alert.textFields![1]
+            let descriptionTextField = alert.textFields![2]
             
             let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, rating: 0, address: addressTextField.text!)
-            
-        
-//            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, addressTextField.text!)
             
             let adventureItemRef = self.ref.childByAppendingPath(textField.text!.lowercaseString)
             
@@ -109,12 +107,16 @@ class AdventureListTableViewController: UITableViewController {
         }
         
         alert.addTextFieldWithConfigurationHandler {
-            (textField: UITextField!) -> Void in
-            textField.placeholder = "Enter Place Name"
+            (textField: UITextField?) -> Void in
+            textField?.placeholder = "Enter Place Name"
         }
         alert.addTextFieldWithConfigurationHandler {
-            (addressTextField: UITextField!) -> Void in
-            addressTextField.placeholder = "Enter Address"
+            (addressTextField: UITextField?) -> Void in
+            addressTextField?.placeholder = "Enter Address"
+        }
+        alert.addTextFieldWithConfigurationHandler {
+            (descriptionTextField: UITextField?) -> Void in
+            descriptionTextField?.placeholder = "Enter Description"
         }
         
         alert.addAction(saveAction)
