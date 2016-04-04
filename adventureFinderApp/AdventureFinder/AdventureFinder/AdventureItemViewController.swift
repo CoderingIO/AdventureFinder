@@ -12,9 +12,10 @@ class AdventureItemViewController: DetailViewController {
     
     @IBOutlet weak var placeNameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var descriptionTextField: UITextView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var addressLabel: UILabel?
+    @IBOutlet weak var descriptionTextField: UITextView?
+    @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var ratingControl: RatingControl?
     
     @IBOutlet weak var navBar:UINavigationBar?
     
@@ -27,6 +28,7 @@ class AdventureItemViewController: DetailViewController {
         ratingLabel?.text = "Awesome"
         addressLabel?.text = adventure!.address
         descriptionTextField?.text = "Description Here"
+        ratingControl?.rating = adventure!.rating
         
     }
     

@@ -316,18 +316,16 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ys-fo-ZYs">
-                                            <rect key="frame" x="86" y="58" width="173" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elw-Sb-fPk">
                                             <rect key="frame" x="518" y="8" width="74" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MCJ-UI-vtP" customClass="RatingControl" customModule="AdventureFinder" customModuleProvider="target">
+                                            <rect key="frame" x="86" y="58" width="240" height="21"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="osa-JT-Hol" firstAttribute="leading" secondItem="Edi-p6-1E3" secondAttribute="trailing" constant="7" id="2Ze-4H-Uzt"/>
@@ -341,7 +339,7 @@
                                 <connections>
                                     <outlet property="PlaceNameLabel" destination="osa-JT-Hol" id="3Jd-Oc-5Fy"/>
                                     <outlet property="addressLabel" destination="Elw-Sb-fPk" id="VEn-bE-wio"/>
-                                    <outlet property="ratingLabel" destination="4ys-fo-ZYs" id="5Hd-Ae-Yza"/>
+                                    <outlet property="ratingControl" destination="MCJ-UI-vtP" id="tYL-5u-Gtr"/>
                                     <segue destination="Kom-kL-3Ns" kind="show" identifier="AdventureItemView" action="showDetailViewController:sender:" id="LiV-uv-mvE"/>
                                 </connections>
                             </tableViewCell>
@@ -406,21 +404,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeA-Z0-wSI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeA-Z0-wSI">
                                 <rect key="frame" x="179" y="286" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-Ck-WAk">
-                                <rect key="frame" x="179" y="315" width="71" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-Ck-WAk">
+                                <rect key="frame" x="501" y="315" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-cS-mPF" customClass="RatingControl" customModule="AdventureFinder" customModuleProvider="target">
+                                <rect key="frame" x="251" y="286" width="321" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="L2T-ZO-F0Z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TVV-cS-mPF" secondAttribute="trailing" constant="8" id="0Ad-FU-MxV"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="trailing" secondItem="C1X-cy-v58" secondAttribute="trailingMargin" id="0ze-N0-ZGc"/>
                             <constraint firstItem="0IL-pV-sgW" firstAttribute="top" secondItem="Eaz-MH-uFY" secondAttribute="bottom" constant="8" symbolic="YES" id="9kI-nA-ycN"/>
                             <constraint firstAttribute="bottom" secondItem="0IL-pV-sgW" secondAttribute="bottom" constant="20" symbolic="YES" id="9lu-mh-CGW"/>
@@ -430,14 +436,17 @@
                             <constraint firstItem="Eaz-MH-uFY" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="bottom" constant="8" id="JfM-hk-pht"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="top" secondItem="Ggy-fF-ubr" secondAttribute="bottom" id="Kmj-rt-sSo"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="leading" secondItem="C1X-cy-v58" secondAttribute="leadingMargin" id="KpI-Z0-fmj"/>
-                            <constraint firstItem="VeA-Z0-wSI" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="top" id="Q0D-dC-Zy5"/>
+                            <constraint firstItem="VeA-Z0-wSI" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="top" id="Ob8-mR-c5v"/>
+                            <constraint firstItem="TVV-cS-mPF" firstAttribute="top" secondItem="VeA-Z0-wSI" secondAttribute="top" id="Pag-CD-pw4"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="top" secondItem="Ggy-fF-ubr" secondAttribute="bottom" id="RZX-3k-AgQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VeA-Z0-wSI" secondAttribute="trailing" constant="8" id="TYf-g1-DkU"/>
+                            <constraint firstItem="TVV-cS-mPF" firstAttribute="leading" secondItem="VeA-Z0-wSI" secondAttribute="trailing" constant="23" id="UGo-6r-pkC"/>
                             <constraint firstItem="ecP-Vv-jN8" firstAttribute="top" secondItem="Ggy-fF-ubr" secondAttribute="bottom" id="Y2G-kB-1eG"/>
                             <constraint firstItem="0IL-pV-sgW" firstAttribute="leading" secondItem="Eaz-MH-uFY" secondAttribute="leading" id="a38-6c-86i"/>
                             <constraint firstItem="Ggy-fF-ubr" firstAttribute="top" secondItem="C1X-cy-v58" secondAttribute="topMargin" id="bwR-Lg-hcf"/>
                             <constraint firstItem="gNQ-rb-4F8" firstAttribute="top" secondItem="ecP-Vv-jN8" secondAttribute="bottom" constant="3" id="cLR-a4-PGG"/>
                             <constraint firstItem="gNQ-rb-4F8" firstAttribute="leading" secondItem="ecP-Vv-jN8" secondAttribute="leading" id="eZw-rd-Xsq"/>
+                            <constraint firstItem="TVV-cS-mPF" firstAttribute="leading" secondItem="C1X-cy-v58" secondAttribute="leading" constant="251" id="ksf-g5-6a1"/>
+                            <constraint firstItem="TVV-cS-mPF" firstAttribute="top" secondItem="ecP-Vv-jN8" secondAttribute="bottom" constant="3" id="naC-yz-cOg"/>
                             <constraint firstItem="Eaz-MH-uFY" firstAttribute="leading" secondItem="gNQ-rb-4F8" secondAttribute="leading" id="oK3-bi-Qqh"/>
                             <constraint firstItem="Ggy-fF-ubr" firstAttribute="leading" secondItem="C1X-cy-v58" secondAttribute="leadingMargin" constant="-20" id="xlP-XZ-6Ri"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jbc-Ck-WAk" secondAttribute="trailing" constant="8" id="yYO-Us-ahi"/>

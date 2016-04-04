@@ -38,7 +38,7 @@ class AdventureListTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        ref.queryOrderedByChild("completed").observeEventType(.Value, withBlock: { snapshot in
+        ref.queryOrderedByChild("rating").observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
             
                 var newAdventures = [AdventureItem]()
@@ -92,7 +92,9 @@ class AdventureListTableViewController: UITableViewController {
             let textField = alert.textFields![0]
             let addressTextField = alert.textFields![1]
             
-            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, key: "", address: addressTextField.text!)
+            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, rating: 0, address: addressTextField.text!)
+            
+        
 //            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, addressTextField.text!)
             
             let adventureItemRef = self.ref.childByAppendingPath(textField.text!.lowercaseString)

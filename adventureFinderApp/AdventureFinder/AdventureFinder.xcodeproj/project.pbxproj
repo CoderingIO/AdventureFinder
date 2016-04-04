@@ -33,6 +33,7 @@
 		9ED31EB01CA0C3CA0072B5A0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED31EAF1CA0C3CA0072B5A0 /* SystemConfiguration.framework */; };
 		9ED31EB21CA0C41E0072B5A0 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED31EB11CA0C41E0072B5A0 /* Firebase.framework */; };
 		9ED31EB71CA0DFE50072B5A0 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED31EB61CA0DFE50072B5A0 /* MapTableViewCell.swift */; };
+		9EF2E2D81CB03B9D007C107B /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2E2D71CB03B9D007C107B /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		9ED31EAF1CA0C3CA0072B5A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9ED31EB11CA0C41E0072B5A0 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		9ED31EB61CA0DFE50072B5A0 /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		9EF2E2D71CB03B9D007C107B /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		B044066779D4F8BECDE75412 /* Pods_AdventureFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdventureFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 				9E30FE4D1CA9D01E000F869D /* SearchTableViewController.swift */,
 				9E30FE4B1CA9C108000F869D /* MapTableViewController.swift */,
 				9E30FE3D1CA31BFD000F869D /* LoginViewController.swift */,
+				9EF2E2D71CB03B9D007C107B /* RatingControl.swift */,
 				9E30FE431CA370CB000F869D /* AdventureListTableViewController.swift */,
 				9E30FE511CAB3A4B000F869D /* DetailViewController.swift */,
 				9E30FE451CA4BAF8000F869D /* AdventureItemTableViewCell.swift */,
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EF2E2D81CB03B9D007C107B /* RatingControl.swift in Sources */,
 				9E30FE521CAB3A4B000F869D /* DetailViewController.swift in Sources */,
 				9E30FE3E1CA31BFD000F869D /* LoginViewController.swift in Sources */,
 				9E30FE401CA33325000F869D /* AdvetureFinderItem.swift in Sources */,

@@ -18,6 +18,8 @@ class AdventureItemTableViewCell: UITableViewCell {
     
     @IBOutlet weak var addressLabel: UILabel!
 
+    @IBOutlet weak var ratingControl: RatingControl!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,6 +37,7 @@ class AdventureItemTableViewCell: UITableViewCell {
         if let adventure = adventure {
             placeNameLabel.text = adventure.name
             addressLabel.text = adventure.address
+            ratingControl.rating = adventure.rating
         }
     }
 
