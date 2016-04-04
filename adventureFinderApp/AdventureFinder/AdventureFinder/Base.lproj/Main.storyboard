@@ -350,14 +350,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eaz-MH-uFY">
-                                <rect key="frame" x="28" y="101" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0IL-pV-sgW">
-                                <rect key="frame" x="28" y="130" width="544" height="450"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0IL-pV-sgW">
+                                <rect key="frame" x="28" y="188" width="544" height="392"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -375,36 +369,37 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-Ck-WAk">
-                                <rect key="frame" x="501" y="101" width="71" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-Ck-WAk">
+                                <rect key="frame" x="28" y="130" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-cS-mPF" customClass="RatingControl" customModule="AdventureFinder" customModuleProvider="target">
-                                <rect key="frame" x="251" y="72" width="321" height="21"/>
+                                <rect key="frame" x="28" y="101" width="321" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eaz-MH-uFY">
+                                <rect key="frame" x="28" y="159" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gNQ-rb-4F8" firstAttribute="leading" secondItem="C1X-cy-v58" secondAttribute="leadingMargin" constant="8" id="378-hk-A5F"/>
-                            <constraint firstItem="TVV-cS-mPF" firstAttribute="trailing" secondItem="Jbc-Ck-WAk" secondAttribute="trailing" id="4PA-G2-eJ2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TVV-cS-mPF" secondAttribute="trailing" constant="8" id="6Me-8F-k5y"/>
-                            <constraint firstItem="Eaz-MH-uFY" firstAttribute="leading" secondItem="gNQ-rb-4F8" secondAttribute="leading" id="7OA-Lb-4gr"/>
-                            <constraint firstItem="TVV-cS-mPF" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="top" id="8Mx-b7-c6l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0IL-pV-sgW" secondAttribute="trailing" constant="8" id="FnO-fn-dLw"/>
+                            <constraint firstItem="Eaz-MH-uFY" firstAttribute="leading" secondItem="Jbc-Ck-WAk" secondAttribute="leading" id="2mA-xd-dIc"/>
+                            <constraint firstItem="gNQ-rb-4F8" firstAttribute="top" secondItem="LOv-Oo-PHd" secondAttribute="bottom" constant="8" id="DDS-H4-cFl"/>
+                            <constraint firstItem="Jbc-Ck-WAk" firstAttribute="top" secondItem="TVV-cS-mPF" secondAttribute="bottom" constant="8" id="GAy-Ak-tx1"/>
+                            <constraint firstItem="0IL-pV-sgW" firstAttribute="top" secondItem="Eaz-MH-uFY" secondAttribute="bottom" constant="8" id="HGq-bI-8ln"/>
+                            <constraint firstItem="TVV-cS-mPF" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="bottom" constant="8" id="HvU-8r-0EQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ggy-fF-ubr" secondAttribute="trailing" constant="-20" id="JFg-8G-3sc"/>
-                            <constraint firstItem="TVV-cS-mPF" firstAttribute="trailing" secondItem="0IL-pV-sgW" secondAttribute="trailing" id="NvW-6a-WMt"/>
-                            <constraint firstItem="0IL-pV-sgW" firstAttribute="top" secondItem="Eaz-MH-uFY" secondAttribute="bottom" constant="8" id="WIT-ff-Sld"/>
-                            <constraint firstItem="gNQ-rb-4F8" firstAttribute="top" secondItem="Ggy-fF-ubr" secondAttribute="bottom" constant="28" id="aR0-UQ-I7G"/>
-                            <constraint firstItem="ERE-GP-StE" firstAttribute="top" secondItem="0IL-pV-sgW" secondAttribute="bottom" constant="20" id="ahT-4Q-JwP"/>
+                            <constraint firstItem="gNQ-rb-4F8" firstAttribute="leading" secondItem="C1X-cy-v58" secondAttribute="leadingMargin" constant="8" id="Lim-7p-A1f"/>
+                            <constraint firstItem="TVV-cS-mPF" firstAttribute="leading" secondItem="gNQ-rb-4F8" secondAttribute="leading" id="SYw-f2-Zy7"/>
+                            <constraint firstItem="0IL-pV-sgW" firstAttribute="leading" secondItem="Eaz-MH-uFY" secondAttribute="leading" id="bi7-bI-t8f"/>
                             <constraint firstItem="Ggy-fF-ubr" firstAttribute="top" secondItem="C1X-cy-v58" secondAttribute="topMargin" id="bwR-Lg-hcf"/>
-                            <constraint firstItem="Jbc-Ck-WAk" firstAttribute="top" secondItem="TVV-cS-mPF" secondAttribute="bottom" constant="8" id="cAc-e9-yrN"/>
-                            <constraint firstItem="0IL-pV-sgW" firstAttribute="top" secondItem="Jbc-Ck-WAk" secondAttribute="bottom" constant="8" id="ikc-8V-hh3"/>
-                            <constraint firstItem="TVV-cS-mPF" firstAttribute="top" secondItem="Ggy-fF-ubr" secondAttribute="bottom" constant="28" id="jnz-JH-z0i"/>
-                            <constraint firstItem="Eaz-MH-uFY" firstAttribute="top" secondItem="gNQ-rb-4F8" secondAttribute="bottom" constant="8" id="nN5-Qt-JrY"/>
-                            <constraint firstItem="0IL-pV-sgW" firstAttribute="leading" secondItem="Eaz-MH-uFY" secondAttribute="leading" id="oJa-FK-pSo"/>
+                            <constraint firstItem="Jbc-Ck-WAk" firstAttribute="leading" secondItem="TVV-cS-mPF" secondAttribute="leading" id="iff-hk-32H"/>
+                            <constraint firstItem="Eaz-MH-uFY" firstAttribute="top" secondItem="Jbc-Ck-WAk" secondAttribute="bottom" constant="8" id="m6K-NB-2kh"/>
                             <constraint firstItem="Ggy-fF-ubr" firstAttribute="leading" secondItem="C1X-cy-v58" secondAttribute="leadingMargin" constant="-20" id="xlP-XZ-6Ri"/>
                         </constraints>
                     </view>

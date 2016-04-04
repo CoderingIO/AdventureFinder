@@ -93,7 +93,7 @@ class AdventureListTableViewController: UITableViewController {
             let addressTextField = alert.textFields![1]
             let descriptionTextField = alert.textFields![2]
             
-            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, rating: 0, address: addressTextField.text!)
+            let adventureItem = AdventureItem(name: textField.text!, addedByUser: self.user.email, rating: 0, address: addressTextField.text!, description: descriptionTextField.text!)
             
             let adventureItemRef = self.ref.childByAppendingPath(textField.text!.lowercaseString)
             

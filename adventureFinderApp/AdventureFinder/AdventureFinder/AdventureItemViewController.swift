@@ -25,10 +25,10 @@ class AdventureItemViewController: DetailViewController {
         
         placeNameLabel?.text = adventure!.name
         navigationItem.title = adventure!.name
-        ratingLabel?.text = "Awesome"
-        addressLabel?.text = adventure!.address
-        descriptionTextField?.text = "Description Here"
-        ratingControl?.rating = adventure!.rating
+        ratingLabel?.text = ""
+        addressLabel?.text = adventure?.address
+        descriptionTextField?.text = adventure?.description
+        ratingControl?.rating = (adventure?.rating)!
         
     }
     
