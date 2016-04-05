@@ -87,7 +87,9 @@ class LoginViewController: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-
+    @IBAction func unwindToLoginScreen(segue: UIStoryboardSegue) {
+        
+    }
     /*
     // MARK: - Navigation
 

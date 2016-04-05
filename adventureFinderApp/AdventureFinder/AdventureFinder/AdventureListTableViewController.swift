@@ -11,6 +11,7 @@ import Firebase
 
 class AdventureListTableViewController: UITableViewController {
     
+    let rootRef = Firebase(url: "https://adventurefinder.firebaseio.com")
     let ref = Firebase(url: "https://adventurefinder.firebaseio.com/adventures")
     let usersRef = Firebase(url: "https://adventurefinder.firebaseio.com/activeUsers")
     
@@ -144,4 +145,10 @@ class AdventureListTableViewController: UITableViewController {
         }
     }
 
+    @IBAction func loginScreenTouched(sender: UIButton) {
+        rootRef.unauth()
+        self.performSegueWithIdentifier("loginSegue", sender: self)
+        
+    }
+    
 }
