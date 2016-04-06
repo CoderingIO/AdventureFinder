@@ -23,7 +23,7 @@ struct AdventureItem {
     
     // move key to end. Dont have to include when calling
     init(name:String, addedByUser:String, rating:Int, address:String, description:String) {
-        self.rating = rating
+        self.rating = 0
         self.name = name
         self.address = address
         self.addedByUser = addedByUser

@@ -31,7 +31,10 @@ class AdventureListTableViewController: UITableViewController {
         //user = User(uid: "FakeID", email: "looking@for.fun")
         
         tableView.rowHeight = 85.0
-        
+
+        tableView.layer.masksToBounds = true
+        tableView.layer.borderColor = UIColor.greenColor().CGColor
+        tableView.layer.borderWidth = 2.0
     }
     
 
@@ -77,6 +80,7 @@ class AdventureListTableViewController: UITableViewController {
         
         cell.adventure = adventureItem
         cell.configureView()
+        
         
         return cell
         

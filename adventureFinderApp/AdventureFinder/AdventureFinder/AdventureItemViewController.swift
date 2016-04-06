@@ -21,15 +21,22 @@ class AdventureItemViewController: DetailViewController {
     
     
     override func configureView() {
-        guard let adventure = self.detailItem as? AdventureItem? where placeNameLabel != nil else {return}
+        guard let adventure = self.detailItem as? AdventureItem where placeNameLabel != nil else {return}
         
-        placeNameLabel?.text = adventure!.name
-        navigationItem.title = adventure!.name
+        placeNameLabel?.text = adventure.name
+        navigationItem.title = adventure.name
         ratingLabel?.text = ""
-        addressLabel?.text = adventure?.address
-        descriptionTextField?.text = adventure?.description
-        ratingControl?.rating = (adventure?.rating)!
+        addressLabel?.text = adventure.address
+        descriptionTextField?.text = adventure.description
+        ratingControl?.rating = (adventure.rating)
         
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        guard let adventure = self.detailItem as? AdventureItem where placeNameLabel != nil else {return}
+        
+        adventure.ref?.updateChildValues(["description": descriptionTextField!.text])
+
     }
     
     override func viewDidLoad() {

@@ -37,7 +37,7 @@ class AdventureItemTableViewCell: UITableViewCell {
         if let adventure = adventure {
             placeNameLabel.text = adventure.name
             addressLabel.text = adventure.address
-            ratingControl.rating = adventure.rating
+//            ratingControl.rating = adventure.rating
         }
     }
 
